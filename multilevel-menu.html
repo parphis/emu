@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="description" content="menu navbar for EMU site">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/w3.css">
+    <!--<link rel="stylesheet" href="./css/menu.css">-->
+    <title>Esterházi Móric Ált. Isk. menü</title>
+  </head>
+  <body>
+    <div class="w3-container">
+      <nav id="main-menu">
+        <div class="w3-bar w3-black">
+          <div class="w3-dropdown-hover">
+            <button class="w3-button" onclick="//toogleSubmenu('about-us')">
+              Iskolánkról <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="about-us" class="w3-dropdown-content w3-bar-block w3-card">
+              <a href="#" class="w3-bar-item w3-button">Iskolatörténet</a>
+              <a href="#" class="w3-bar-item w3-button">Névadónkról</a>
+              <a href="#" class="w3-bar-item w3-button">Elismeréseink</a>
+              <a href="#" class="w3-bar-item w3-button">Zeneiskola</a>
+              <a href="#" class="w3-bar-item w3-button">Gánti tagintézményünk</a>
+            </div>
+          </div>
+          <div class="w3-dropdown-hover">
+            <button class="w3-button" onclick="//toogleSubmenu('life-by-us')">
+              Iskolai élet <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="life-by-us" class="w3-dropdown-content w3-bar-block w3-card">
+              <div class="w3-dropdown-click">
+                <button class="w3-button" onclick="toogleSubmenu('employees')">
+                  Munkatársak <i class="fa fa-caret-down"></i>
+                </button>
+                <div id="employees" class="w3-dropdown-content w3-bar-block w3-card">
+                  <a href="#" class="w3-bar-item w3-button">Iskolavezetés</a>
+                  <a href="#" class="w3-bar-item w3-button">Pedagógusaink</a>
+                  <a href="#" class="w3-bar-item w3-button">Pedagógiai munkát segítők</a>
+                  <a href="#" class="w3-bar-item w3-button">Technikai dolgozók</a>
+                </div>
+              </div>
+              <a href="#" class="w3-bar-item w3-button">Osztályok</a>
+              <a href="#" class="w3-bar-item w3-button">Diákönkormányzat</a>
+              <a href="#" class="w3-bar-item w3-button">Szülői munkaközösség</a>
+              <a href="#" class="w3-bar-item w3-button">Hitoktatás</a>
+              <a href="#" class="w3-bar-item w3-button">Szakkörök</a>
+              <a href="#" class="w3-bar-item w3-button">Munkatervek</a>
+            </div>
+          </div>
+          <div class="w3-dropdown-click">
+            <button class="w3-button" onclick="toogleSubmenu('challenges')">
+              Versenyek <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="challenges" class="w3-dropdown-content w3-bar-block w3-card">
+              <a href="#" class="w3-bar-item w3-button">Aktuális versenyinformációk</a>
+              <a href="#" class="w3-bar-item w3-button">Saját versenyek</a>
+              <a href="#" class="w3-bar-item w3-button">Eredmények</a>
+            </div>
+          </div>
+          <div class="w3-dropdown-click">
+            <button class="w3-button" onclick="toogleSubmenu('news')">
+              Hírek <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="news" class="w3-dropdown-content w3-bar-block w3-card">
+              <a href="#" class="w3-bar-item w3-button">Aktuális hírek</a>
+              <a href="#" class="w3-bar-item w3-button">Eseménytár</a>
+            </div>
+          </div>
+          <div class="w3-dropdown-click">
+            <button class="w3-button" onclick="toogleSubmenu('documents')">
+              Dokumentumok <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="documents" class="w3-dropdown-content w3-bar-block w3-card">
+              <a href="#" class="w3-bar-item w3-button">Alapdokumentumok</a>
+              <a href="#" class="w3-bar-item w3-button">Közzétételi lista</a>
+              <a href="#" class="w3-bar-item w3-button">Letölthető dokumentumok</a>
+              <a href="#" class="w3-bar-item w3-button">Támogatási lehetőségek</a>
+            </div>
+          </div>
+          <a href="#" class="w3-bar-item w3-button">Kapcsolat</a>
+          <a href="#" class="w3-bar-item w3-button">Galéria</a>
+        </div>
+      </nav>
+    </div>
+  <script>
+    function toogleSubmenu(id) {
+      let x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+      let arrSubmenuShown = document.getElementsByClassName("w3-show");
+      for (var i = 0, len = arrSubmenuShown.length|0; i<len; i = i + 1|0) {
+        if (arrSubmenuShown[i]!==undefined && arrSubmenuShown[i].id!=id) {
+          arrSubmenuShown[i].className = arrSubmenuShown[i].className.replace(" w3-show", "");
+        }
+      }
+    }
+  </script>
+  </body>
+</html>
+

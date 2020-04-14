@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="description" content="menu navbar for EMU site">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/w3.css">
+    <!--<link rel="stylesheet" href="./css/menu.css">-->
+    <title>Esterházi Móric Ált. Isk. menü</title>
+  </head>
+  <body>
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-light-grey w3-card w3-animate-left" style="width:200px;" id="emu-sidebar">
+      <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+      <button class="w3-button w3-block w3-left-align" onclick="toggleAcc('about-us')">
+      Iskolánkról <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="about-us" class="w3-hide w3-white w3-card">
+        <a href="#" class="w3-bar-item w3-button">Iskolatörténet</a>
+        <a href="#" class="w3-bar-item w3-button">Névadónkról</a>
+        <a href="#" class="w3-bar-item w3-button">Elismeréseink</a>
+        <a href="#" class="w3-bar-item w3-button">Zeneiskola</a>
+        <a href="#" class="w3-bar-item w3-button">Gánti tagintézményünk</a>
+      </div>
+      <button class="w3-button w3-block w3-left-align" onclick="toggleAcc('school-life')">
+      Iskolai élet <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="school-life" class="w3-hide w3-white w3-card">
+        <a href="#" class="w3-bar-item w3-button">Munkatársak</a>
+        <a href="#" class="w3-bar-item w3-button">Osztályok</a>
+        <a href="#" class="w3-bar-item w3-button">Diákönkormányzat</a>
+        <a href="#" class="w3-bar-item w3-button">Szülői munkaközösség</a>
+        <a href="#" class="w3-bar-item w3-button">Hitoktatás</a>
+        <a href="#" class="w3-bar-item w3-button">Szakkörök</a>
+        <a href="#" class="w3-bar-item w3-button">Munkatervek</a>
+      </div>
+      <button class="w3-button w3-block w3-left-align" onclick="toggleAcc('competitions')">
+      Versenyek <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="competitions" class="w3-hide w3-white w3-card">
+        <a href="#" class="w3-bar-item w3-button">Aktuális versenyinformációk</a>
+        <a href="#" class="w3-bar-item w3-button">Saját versenyek</a>
+        <a href="#" class="w3-bar-item w3-button">Eredmények</a>
+      </div>
+      <button class="w3-button w3-block w3-left-align" onclick="toggleAcc('news')">
+      Hírek <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="news" class="w3-hide w3-white w3-card">
+        <a href="#" class="w3-bar-item w3-button">Aktuális hírek</a>
+        <a href="#" class="w3-bar-item w3-button">Eseménytár</a>
+      </div>
+      <button class="w3-button w3-block w3-left-align" onclick="toggleAcc('documents')">
+      Dokumentumok <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="documents" class="w3-hide w3-white w3-card">
+        <a href="#" class="w3-bar-item w3-button">Alapdokumentumok</a>
+        <a href="#" class="w3-bar-item w3-button">Közzétételi lista</a>
+        <a href="#" class="w3-bar-item w3-button">Letölthető dokumentumok</a>
+        <a href="#" class="w3-bar-item w3-button">Támogatási lehetőségek</a>
+      </div>
+      <a href="#" class="w3-bar-item w3-button">Kapcsolat</a>
+      <a href="#" class="w3-bar-item w3-button">Galéria</a>
+    </div>
+    <div class="w3-main" style="margin-left:200px">
+      <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+          <h1>Csákvári Esterházi Móricz Ált. Isk. honlap menü.</h1>
+        </div>
+      </div>
+    </div>
+  <script>
+    function toggleAcc(id) {
+      console.log(id);
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+      }
+    }
+    function w3_open() {
+      document.getElementById("emu-sidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("emu-sidebar").style.display = "none";
+    }
+  </script>
+  </body>
+</html>
+
